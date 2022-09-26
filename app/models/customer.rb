@@ -1,5 +1,5 @@
 class Customer < ApplicationRecord
-  Customer.find_each do |customer|
-    NewsMailer.weekly(customer).deliver_now
-  end  
+  belongs_to :  Review
+  belongs_to : order
+  belongs_to :supplier
 end
