@@ -1,5 +1,4 @@
 class Customer < ApplicationRecord
-  belongs_to :  Review
-  belongs_to : order
-  belongs_to :supplier
+  has_many :orders
+  has_many :reviews
 end
