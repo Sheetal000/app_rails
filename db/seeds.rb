@@ -50,10 +50,17 @@ factory :order do
   shipping {Faker::order.shipping}
 end
 end
+
+100.times do 
+  Author.create({ 
+    first_name { Faker::Name.first_name }
+    last_name  { Faker::Name.last_name }
+  })
+end
 ## driver logic
 # years = (1990...2022).to_a
 
-# puts FactoryBot.create :author
+puts FactoryBot.create :author
 # puts FactoryBot.create :customer
 # puts FactoryBot.create :supplier
 #  putsFactoryBot.create :reviews
