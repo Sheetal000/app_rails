@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_09_25_170829) do
+ActiveRecord::Schema[7.0].define(version: 2022_09_29_124416) do
   create_table "authors", force: :cascade do |t|
     t.string "first_name"
     t.string "last_name"
@@ -42,6 +42,11 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_25_170829) do
     t.index ["orders_id"], name: "index_books_orders_on_orders_id"
   end
 
+  create_table "clients", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "customers", force: :cascade do |t|
     t.string "first_name"
     t.string "last_name"
@@ -67,6 +72,13 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_25_170829) do
     t.index ["customer_id"], name: "index_orders_on_customer_id"
   end
 
+  create_table "people", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "name"
+    t.integer "age"
+  end
+
   create_table "reviews", force: :cascade do |t|
     t.string "title"
     t.text "body"
@@ -82,6 +94,11 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_25_170829) do
 
   create_table "suppliers", force: :cascade do |t|
     t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "users", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
