@@ -1,5 +1,6 @@
 class ClientsController < ApplicationController
   def new
+    flash[:notice] = "this is new...."
     @client = Client.new
   end
 

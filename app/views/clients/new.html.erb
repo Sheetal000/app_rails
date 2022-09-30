@@ -1,7 +1,7 @@
 <h1>Client#new</h1>
 <p>Find me in app/views/client/new.html.erb</p>
 
-
+<%= flash[:notice] %>
 <form accept-charset="UTF-8" action="/clients" method="post">
   <input type="text" name="client[name]" value="Acme" />
   <input type="text" name="client[phone]" value="12345" />
