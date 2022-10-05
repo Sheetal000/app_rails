@@ -1,0 +1,19 @@
+
+<table>
+  <tr>
+    <td>Name</td>
+    <td>Phone </td>
+    <td>Post Code</td>
+    <td>City</td>
+
+  </tr>
+  <%= @clients.each do |client| %>
+  <tr>
+  <td><%= client.name %></td>
+  <td><%= client.phone %></td>
+  <td><%= client.post_code %></td>
+  <td><%= client.city %></td>
+  <td><%= link_to 'show',clients_path(client), :method => :get%></td>
+  </tr>
+  <% end%>
+</table>

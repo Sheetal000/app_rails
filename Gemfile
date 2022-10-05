@@ -23,7 +23,8 @@ gem "turbo-rails"
 
 # Hotwire's modest JavaScript framework [https://stimulus.hotwired.dev]
 gem "stimulus-rails"
-
+gem 'byebug', '~> 11.1', '>= 11.1.3'
+gem 'prawn', '~> 2.1'
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"
 

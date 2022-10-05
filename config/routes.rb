@@ -1,16 +1,12 @@
 Rails.application.routes.draw do
-  # get 'clients/new'
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-
-  # Defines the root path route ("/")
-  # root "articles#index"
-  # get '/clients/:status', to: 'clients#index', foo: 'bar'
-
-
-  ## resourcees
-  resource :clients
-
-  resources :authors do
-    resources :books
+  resources :users
+  resources :admins
+  resources :posts
+  resources :clients do
+    get '/download_pdf', to: 'clients#download_pdf'
   end
+
+  # GET /clients/1.pdf
+
+  get "/stream" , to: "my#stream"
 end
