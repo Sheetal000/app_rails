@@ -16,4 +16,13 @@ class CommentsController < ApplicationController
       render action: "new"
     end
   end
+  
+  def previews
+    # return render json: {data: "error"}
+      # flash[:notice] = "welcome to the team"
+  end
+
+  def show
+    @comment = Comment.find(params[:id])
+  end
 end

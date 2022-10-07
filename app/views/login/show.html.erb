@@ -1,0 +1,10 @@
+<h1>Login Details</h1>
+<br><br>
+<% if @login %>
+
+  <h3>user_name:</h3><%= @login.user_name %>
+  <h3> password:</h3><%= @login.password %>
+
+<% else %>
+  <h3>User does not exists!</h3>
+<% end %>

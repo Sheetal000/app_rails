@@ -1,0 +1,14 @@
+<table>
+  <tr>
+    <td>Name</td>
+    <td>Password </td>
+  
+  </tr>
+  <%= @logins.each do |login| %>
+  <tr>
+  <td><%= login.name %></td>
+  <td><%= login.password %></td>
+  <td><%= link_to 'show',logins_path(login), :method => :get%></td>
+  </tr>
+  <% end%>
+</table>

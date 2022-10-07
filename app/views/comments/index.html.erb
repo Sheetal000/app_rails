@@ -1,0 +1,8 @@
+<table>
+  <tr>
+    <td>Commenter_Name</td>
+    </tr>
+  <%= @comments.each do |login| %>
+    <tr>
+  <td><%= login.commenter_name %></td>
+  <td><%= link_to 'show',comments_path(comment), :method => :get%></td>
