@@ -1,0 +1,14 @@
+<table>
+  <tr>
+    <td>User_name</td>
+    <td>User_id</td>
+  
+  </tr>
+  <%= @photos.each do |photo| %>
+  <tr>
+  <td><%= photo.user_name %></td>
+  <td><%= photo.user_id %></td>
+  <td><%= link_to 'show',photos_path(photo), :method => :get%></td>
+  </tr>
+  <% end%>
+</table>

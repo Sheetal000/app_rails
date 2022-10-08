@@ -1,0 +1,7 @@
+<%= form_with url: "/photos", method: :post do |form| %>
+  <%= form.label :user_name %>
+  <%= form.text_field :user_name %>
+  <%= form.label :user_id %>
+  <%= form.text_field :user_id %>
+  <%= form.submit "Submit" %>
+<% end %>

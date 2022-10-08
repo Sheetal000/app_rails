@@ -10,7 +10,7 @@ class UsersController < ApplicationController
   end
   def show
     # debugger
-    @user = User.find_by(id:params[:id])
+    @user = User.find_by(id:params[:id] params[:user_id])
   end
   def new 
     @user = User.new

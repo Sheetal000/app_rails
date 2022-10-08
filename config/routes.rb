@@ -15,4 +15,19 @@ Rails.application.routes.draw do
   resources :comments do 
     get 'previews', on: :new
   end
+  # get '/photos' , to: 'photos#show'
+  get 'photos(/:id)', to: 'photos#show'
+  # get 'photos/:id/:user_id', to: 'photos#show'
+  # get 'photos/:id/with_user/:user_id', to: 'photos#show'
+  # get 'photos/:id', to: 'photos#show'
+  defaults format: :json do
+    resources :photos
+  end
+  # get 'exit', to: 'sessions#destroy', as: :logout
+  # get ':username', to: 'photos#show', as: :photo
+  # resources :photos
+  match 'photos',to: 'photo#show',via: :all
+  get 'photos/:id', to: 'photos#show', constraints: { id: /[A-Z]\d{5}/ }
+  get  '/photos', to: redirect('/users')
+  
 end
