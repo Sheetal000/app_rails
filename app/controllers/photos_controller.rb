@@ -5,6 +5,7 @@ class PhotosController < ApplicationController
   def new
     @photo = Photo.new
   end
+  
   def show
     photo = Photo.find_by(id: params[:id])
     render json: photo
