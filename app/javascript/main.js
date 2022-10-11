@@ -1,3 +1,3 @@
-export function foobar() {
+function foobar() {
   console.log("this is mains foobar")
 }

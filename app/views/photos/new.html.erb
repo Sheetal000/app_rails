@@ -1,3 +1,8 @@
+
+  <%= stylesheet_link_tag "main", "columns" %>
+  <%= stylesheet_link_tag "http://example.com/main.css" %>
+
+
 <%= form_with url: "/photos", method: :post do |form| %>
   <%= form.label :user_name %>
   <%= form.text_field :user_name %>
@@ -5,3 +10,19 @@
   <%= form.text_field :user_id %>
   <%= form.submit "Submit" %>
 <% end %>
+
+<h1 class = "ab">
+Hello World
+</h1>
+
+<%= render "photos/shared/menu" %>
+
+<h1 class = "dd">
+  Hello Devripples
+</h1>
+
+<h1 class = "xy">
+  Hello everyone
+</h1>
+
+
