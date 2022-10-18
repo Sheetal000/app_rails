@@ -8,6 +8,13 @@ class PeopleController < ApplicationController
     person.update!(person_params)
     redirect_to person
   end
+   def index
+    @person = Person.all
+   end
+
+   def show
+    @person = Person.find(params[:id])
+   end
 
   private
   

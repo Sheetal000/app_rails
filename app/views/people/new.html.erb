@@ -1,0 +1,8 @@
+<%= form_with model: @person do |person_form| %>
+  <%= person_form.text_field :name %>
+  <%= fields_for :age_detail, @person.age_detail do |age_detail_form| %>
+    <%= age_details_form.text_field :age_number %>
+    <button type="submit" formmethod="post" name="_method"
+    
+  <% end %>
+<% end %>

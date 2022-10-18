@@ -1,1 +1,1 @@
-alert("this is columns")
+// alert("this is columns")
