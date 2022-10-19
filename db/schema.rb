@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_10_10_073726) do
+ActiveRecord::Schema[7.0].define(version: 2022_10_19_081652) do
   create_table "authors", force: :cascade do |t|
     t.string "first_name"
     t.string "last_name"
@@ -122,6 +122,14 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_10_073726) do
     t.datetime "updated_at", null: false
     t.index ["book_id"], name: "index_reviews_on_book_id"
     t.index ["customer_id"], name: "index_reviews_on_customer_id"
+  end
+
+  create_table "students", force: :cascade do |t|
+    t.string "stu_name"
+    t.integer "stu_age"
+    t.string "stu_surname"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "suppliers", force: :cascade do |t|

@@ -1,0 +1,20 @@
+<table>
+<tr>
+<td>Stu_name</td>
+<td>Stu_surname</td>
+<td>Stu_age</td>
+
+</tr>
+<%= @students.each do |student| %>
+<tr>
+<td><%= student.stu_name %></td>
+<td><%= student.stu_surname %></td>
+<td><%= student.stu_age %></td>
+<td><%#= link_to '/students', students_path(student) :method => :get%></td>
+<td><%= link_to 'show',students_path(student), :method => :get%></td>
+</tr>
+<% end%>
+</table>
+
+
+
